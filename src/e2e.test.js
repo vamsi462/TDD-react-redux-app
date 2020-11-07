@@ -29,8 +29,8 @@ describe('Bookish', () => {
             return [...document.querySelectorAll('.book h2.title ')].map(el=>el.innerText)
         })
         expect(books.length).toEqual(2)
-        expect(books[0]).toEqual("React")
-        expect(books[1]).toEqual("Redux")
+        expect(books[0]).toEqual('React')
+        expect(books[1]).toEqual('Redux')
     })
 })
 

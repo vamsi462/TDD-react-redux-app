@@ -7,12 +7,10 @@ function App() {
       <h1>Library</h1>
       <div className="books">
         <div className="book">
-          <h2 className="title"> </h2>
+          <h2 className="title">React</h2>
         </div>
         <div className="book">
-         <h2 className="title">
-
-         </h2>
+         <h2 className="title">Redux</h2>
         </div>
       </div>
     </div>
