@@ -21,7 +21,18 @@ describe('Bookish', () => {
 
         expect(result).toEqual('Library')
     })
+
+    test('Book List', async()=>{
+        await page.goto(`${appUrlBase}`)
+        await page.waitForSelector('.books')
+        const books = await page.evaluate(()=>{
+            return [...document.querySelectorAll('.book .title ')].map(el=>el.innerText)
+        })
+        expect(books.length).toEqual(2)
+    })
 })
+
+
 afterAll(()=>{
     browser.close()
 })
