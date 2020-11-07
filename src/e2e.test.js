@@ -26,7 +26,7 @@ describe('Bookish', () => {
         await page.goto(`${appUrlBase}`)
         await page.waitForSelector('.books')
         const books = await page.evaluate(()=>{
-            return [...document.querySelectorAll('.book .title ')].map(el=>el.innerText)
+            return [...document.querySelectorAll('.book h2.title ')].map(el=>el.innerText)
         })
         expect(books.length).toEqual(2)
     })
